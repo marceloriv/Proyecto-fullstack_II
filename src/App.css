@@ -1,0 +1,845 @@
+/* Espacio entre navbar y filtros */
+.filter-section {
+  margin-top: 80px;
+  margin-bottom: 32px;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+}
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.titulo {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+
+/* Card de producto personalizada */
+.product-card {
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+  background: #fff;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.product-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+.product-img {
+  height: 220px;
+  width: 100%;
+  object-fit: cover;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+.card-title {
+  font-family: 'Pacifico', cursive;
+  font-size: 1.3rem;
+  color: #e91e63; /* ← Cambiar de #a0522d a rosa */
+  margin-bottom: 0.5rem;
+}
+
+.card-text {
+  font-family: 'Lato', sans-serif;
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 0.75rem;
+}
+
+.price {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #e91e63; /* ← Cambiar de #d2691e a rosa */
+  margin-bottom: 1rem;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #e91e63, #ff4081) !important;
+  border: none !important;
+  border-radius: 25px !important;
+  padding: 0.6rem 1.5rem !important;
+  font-weight: 600 !important;
+  color: white !important;
+  text-decoration: none !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 2px 8px rgba(233, 30, 99, 0.3) !important;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #c2185b, #e91e63) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 15px rgba(233, 30, 99, 0.4) !important;
+  color: white !important;
+  text-decoration: none !important;
+}
+
+/* Botones específicos para las categorías del home */
+.category-card .btn,
+.card .btn-primary,
+.btn-outline-primary {
+  background: linear-gradient(135deg, #e91e63, #ff4081) !important;
+  border: none !important;
+  border-radius: 25px !important;
+  padding: 0.6rem 1.5rem !important;
+  font-weight: 600 !important;
+  color: white !important;
+  text-decoration: none !important;
+  display: inline-block !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 2px 8px rgba(233, 30, 99, 0.3) !important;
+}
+
+.category-card .btn:hover,
+.card .btn-primary:hover,
+.btn-outline-primary:hover {
+  background: linear-gradient(135deg, #c2185b, #e91e63) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 15px rgba(233, 30, 99, 0.4) !important;
+  color: white !important;
+  text-decoration: none !important;
+}
+
+/* Para los botones "Ver más" de las cards del home */
+.card .btn,
+.product-card .btn {
+  background: linear-gradient(135deg, #e91e63, #ff4081) !important;
+  border: none !important;
+  border-radius: 25px !important;
+  padding: 0.6rem 1.5rem !important;
+  font-weight: 600 !important;
+  color: white !important;
+  text-decoration: none !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 2px 8px rgba(233, 30, 99, 0.3) !important;
+}
+
+.card .btn:hover,
+.product-card .btn:hover {
+  background: linear-gradient(135deg, #c2185b, #e91e63) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 15px rgba(233, 30, 99, 0.4) !important;
+  color: white !important;
+  text-decoration: none !important;
+}
+
+/* También para los enlaces que actúan como botones */
+a.btn-primary {
+  background: linear-gradient(135deg, #e91e63, #ff4081) !important;
+  border: none !important;
+  border-radius: 25px !important;
+  padding: 0.6rem 1.5rem !important;
+  font-weight: 600 !important;
+  color: white !important;
+  text-decoration: none !important;
+  display: inline-block !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 2px 8px rgba(233, 30, 99, 0.3) !important;
+}
+
+a.btn-primary:hover {
+  background: linear-gradient(135deg, #c2185b, #e91e63) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 15px rgba(233, 30, 99, 0.4) !important;
+  color: white !important;
+  text-decoration: none !important;
+}
+
+/* Contacto - Usar toda la pantalla */
+.contact-header,
+.contact-content {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+}
+
+.contact-header .container,
+.contact-content .container {
+  max-width: none;
+  width: 100%;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+/* Header con fondo rosa suave */
+.contact-header {
+  background: linear-gradient(135deg, 
+    rgba(252, 228, 236, 0.95) 0%,
+    rgba(248, 187, 208, 0.85) 50%,
+    rgba(252, 228, 236, 0.95) 100%
+  );
+  min-height: 40vh;
+  display: flex;
+  align-items: center;
+}
+
+.contact-header h1 {
+  font-size: 3.5rem;
+  color: #d63384;
+  margin-bottom: 1rem;
+}
+
+.contact-header p {
+  font-size: 1.3rem;
+  color: #454447;
+}
+
+/* Contenido principal expandido */
+.contact-content {
+  background-color: #f8f9fa;
+  min-height: 60vh;
+}
+
+.contact-content .row {
+  margin: 0;
+}
+
+.contact-content .col-md-6 {
+  padding: 2rem 3rem;
+}
+
+/* Cards de información más grandes */
+.info-item {
+  padding: 1.5rem;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid #e91e63;
+}
+
+.info-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(233, 30, 99, 0.15);
+}
+
+.info-icon {
+  font-size: 2rem;
+  background: linear-gradient(135deg, #fce4ec, #f8bbd0);
+  padding: 1rem;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+}
+
+/* Formulario mejorado */
+form {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  height: fit-content;
+}
+
+.form-control {
+  border: 2px solid #e9ecef;
+  border-radius: 10px;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #e91e63;
+  box-shadow: 0 0 0 0.2rem rgba(233, 30, 99, 0.25);
+}
+
+/* Página de Iniciar Sesión */
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, 
+    rgba(252, 228, 236, 0.95) 0%,
+    rgba(248, 187, 208, 0.85) 50%,
+    rgba(252, 228, 236, 0.95) 100%
+  );
+  padding: 2rem;
+}
+
+.login-form {
+  background: white;
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(214, 51, 132, 0.3);
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #d63384;
+}
+
+/* Labels con estilo de título Pacifico */
+.login-form .titulo {
+  font-family: 'Pacifico', cursive !important;
+  color: #d63384 !important;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+/* Inputs mejorados */
+.login-form .form-control {
+  border: 2px solid #e9ecef;
+  border-radius: 10px;
+  padding: 0.8rem;
+  transition: all 0.3s ease;
+}
+
+.login-form .form-control:focus {
+  border-color: #e91e63;
+  box-shadow: 0 0 0 0.2rem rgba(233, 30, 99, 0.25);
+}
+
+/* Botón de envío */
+.btn-submit-login {
+  width: 100%;
+  padding: 0.8rem;
+  font-weight: 600;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #e91e63, #ff4081) !important;
+  border: none;
+  margin-top: 1rem;
+}
+
+.btn-submit-login:hover {
+  background: linear-gradient(135deg, #c2185b, #e91e63) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(233, 30, 99, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-header .container,
+  .contact-content .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  
+  .contact-content .col-md-6 {
+    padding: 1.5rem;
+  }
+  
+  .contact-header h1 {
+    font-size: 2.5rem;
+  }
+  
+  .contact-header p {
+    font-size: 1.1rem;
+  }
+  
+  form {
+    padding: 1.5rem;
+  }
+  
+  .login-form {
+    padding: 2rem;
+    margin: 1rem;
+  }
+}
+
+/* blog */
+
+.blog {
+  padding: 60px 20px;
+  background-color: #fff8f3;
+}
+
+.blog-container {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.blog h1 {
+  color: #e91e63; /* ← Cambiar de #b46a55 a rosa */
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+}
+
+.blog p {
+  color: #444;
+  margin-bottom: 30px;
+  line-height: 1.8;
+}
+
+.blog-posts {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+}
+
+.post {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 25px;
+  max-width: 700px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.post h2 {
+  color: #e91e63; /* ← Cambiar de #b46a55 a rosa */
+  margin-bottom: 10px;
+}
+
+.post p {
+  color: #555;
+}
+
+/* Sobre Nosotros */
+
+
+.about-header h1 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.about-header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.about-content {
+    background-color: #f8f9fa;
+}
+
+.about-content h2 {
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.about-content p {
+    color: #6c757d;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+
+.value-icon {
+    font-size: 2.5rem;
+}
+
+.img-fluid {
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .about-header {
+        padding: 2rem 0 !important;
+    }
+    
+    .card-body {
+        padding: 1.5rem;
+    }
+    
+    .col-md-3 {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Variables CSS */
+:root {
+  --primary-color: #d63384;
+  --secondary-color: #6f42c1;
+}
+
+/* Fuente Pacifico para títulos y navbar */
+.navbar-brand,
+h1, h2, h3, h4, h5, h6,
+.titulo {
+  font-family: 'Pacifico', cursive !important;
+  color: var(--primary-color);
+}
+
+/* Estilo específico para el navbar brand */
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: normal;
+  color: var(--primary-color) !important;
+}
+
+/* Hero section con fondo rosa suave difuminado - SOLO EN SU ESPACIO */
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  width: 100vw;                    /* ← Ancho completo */
+  margin-left: calc(-50vw + 50%);  /* ← Romper solo este contenedor */
+  margin-right: calc(-50vw + 50%); /* ← Romper solo este contenedor */
+  background: linear-gradient(135deg, 
+    rgba(252, 228, 236, 0.95) 0%,     /* Rosa muy suave */
+    rgba(248, 187, 208, 0.85) 25%,   /* Rosa pastel suave */
+    rgba(255, 182, 193, 0.75) 50%,   /* Rosa claro suave */
+    rgba(255, 228, 225, 0.85) 75%,   /* Rosa muy claro */
+    rgba(252, 228, 236, 0.95) 100%   /* Rosa muy suave */
+  );
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+/* Patrón de fondo sutil para textura */
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.3) 2px, transparent 2px),
+    radial-gradient(circle at 75% 75%, rgba(255, 182, 193, 0.2) 1px, transparent 1px);
+  background-size: 60px 60px, 40px 40px;
+  z-index: 1;
+}
+
+/* Contenido del hero */
+.hero-section .container {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;  /* ← Contenido centrado */
+  margin: 0 auto;     /* ← Centrado */
+  padding: 0 2rem;    /* ← Padding lateral */
+}
+
+/* Título del hero con fuente Pacifico */
+.hero-title {
+  font-family: 'Pacifico', cursive !important;
+  font-size: 3.5rem;
+  color: #d63384; /* Tu color principal rosa */
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+  line-height: 1.2;
+}
+
+/* Subtítulo del hero */
+.hero-subtitle {
+  font-size: 1.3rem;
+  color: #000000; /* Tu color secundario */
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+/* Botón del hero */
+.hero-btn {
+  font-size: 1.1rem;
+  padding: 0.8rem 2.5rem;
+  border-radius: 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 15px rgba(233, 30, 99, 0.4);
+}
+
+/* Imagen del hero - MÁS PEQUEÑA */
+.hero-image {
+  max-width: 60%; /* reduce aquí: 60%, 50%, 40% según prefieras */
+  height: auto;
+  display: inline-block;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+
+.hero-image:hover {
+  transform: translateY(-4px);
+}
+
+/* Forzar tamaño más pequeño para la imagen del hero */
+.hero-section .col-md-6.text-center .hero-image {
+  max-width: 50% !important; /* ajustar: 40% / 35% / 30% según lo quieras */
+  width: auto !important;
+  height: auto !important;
+  display: inline-block !important;
+  margin: 0 auto !important;
+}
+
+/* Ajustes responsivos: mantener legible en tablet/móvil */
+@media (max-width: 992px) {
+  .hero-section .col-md-6.text-center .hero-image {
+    max-width: 60% !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section .col-md-6.text-center .hero-image {
+    max-width: 100% !important;
+  }
+}
+
+/* Responsive para móvil */
+@media (max-width: 768px) {
+  .hero-section {
+    min-height: 85vh;
+    padding: 2rem 0;
+  }
+  
+  .hero-title {
+    font-size: 2.8rem;
+    text-align: center;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  
+  .hero-image {
+    max-width: 100%;
+    margin-top: 1rem;
+  }
+  
+  .hero-btn {
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2.2rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .hero-image {
+    max-width: 85%;
+  }
+}
+
+/* Suavizar la transición entre hero y siguiente sección */
+.hero-section + section {
+  border-top: 1px solid rgba(255, 182, 193, 0.3);
+}
+
+/* Estilos para que el botón seleccionado cambie de color (tamaños) */
+.size-options .btn {
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+/* cuando el botón tiene la clase "active" (se selecciona) */
+.size-options .btn.active,
+.size-options .btn[aria-pressed="true"] {
+  background-color: #0d6efd; /* color primario (Bootstrap primary) */
+  border-color: #0d6efd;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(13, 110, 253, 0.15);
+}
+
+/* variante más suave para outline cuando no está activo */
+.size-options .btn.btn-outline-primary {
+  color: #0d6efd;
+}
+
+/* feedback visual al presionar (momentáneo) para cualquier botón de cantidad */
+.quantity-btn:active {
+  background-color: rgba(13,110,253,0.12);
+  border-color: rgba(13,110,253,0.2);
+}
+
+/* deshabilitado */
+.quantity-btn:disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* Forzar color cuando una opción de tamaño está activa */
+.product-detail .size-options .btn.active,
+.product-detail .size-options .btn[aria-pressed="true"],
+.size-options .btn.active,
+.size-options .btn[aria-pressed="true"] {
+  background: linear-gradient(135deg, #e91e63, #ff4081) !important; /* color rosa */
+  border-color: transparent !important;
+  color: #fff !important;
+  box-shadow: 0 6px 18px rgba(233,30,99,0.2) !important;
+}
+
+/* Asegurar que el estilo outline no sobreescriba cuando está seleccionado */
+.product-detail .size-options .btn.btn-outline-primary.active,
+.size-options .btn.btn-outline-primary.active {
+  background: linear-gradient(135deg, #e91e63, #ff4081) !important;
+  border-color: transparent !important;
+  color: #fff !important;
+}
+
+/* Pequeño ajuste para el estado focus/hover */
+.product-detail .size-options .btn:focus,
+.size-options .btn:focus {
+  box-shadow: 0 6px 18px rgba(233,30,99,0.12) !important;
+}
+
+/* Estilos específicos para la página de carrito (añadir al final de App.css) */
+.cart-page {
+  background: linear-gradient(180deg, #fff0f6 0%, #ffe6f0 50%, #ffd6e8 100%) !important;
+  padding: 2rem 1rem;
+  border-radius: 12px;
+  margin-top: 1rem;
+}
+
+.cart-card {
+  border-radius: 12px;
+  padding: 0.9rem;
+  margin-bottom: 1rem;
+  background: #fff;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  overflow: hidden;
+}
+
+.cart-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+.cart-img {
+  width: 100%;
+  max-width: 110px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+}
+
+.cart-item-info h5 {
+  margin-bottom: 0.25rem;
+  font-size: 1.05rem;
+  color: #333;
+}
+
+.cart-item-info p {
+  margin: 0;
+  color: #666;
+}
+
+.cart-variant {
+  display: block;
+  font-size: 0.9rem;
+  color: #6c757d;
+  margin-top: 0.25rem;
+}
+
+/* badge de cantidad */
+.cart-badge {
+  font-size: 0.95rem;
+  padding: 0.35rem 0.6rem;
+  border-radius: 12px;
+}
+
+/* botón eliminar pequeño */
+.btn-sm.btn-danger {
+  padding: 0.28rem 0.5rem;
+  font-size: 0.9rem;
+  border-radius: 8px;
+}
+
+/* footer del carrito */
+.cart-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.6rem;
+  margin-top: 0.5rem;
+}
+
+/* Hacer que el botón de "Realizar compra" use el mismo estilo visual que .btn-primary */
+.checkout-btn {
+  border-radius: 25px;
+  padding: 0.6rem 1.6rem;
+  font-weight: 600;
+  box-shadow: 0 6px 18px rgba(233,30,99,0.16);
+  background: linear-gradient(135deg, #e91e63, #ff4081) !important;
+  border: none !important;
+  color: #fff !important;
+}
+
+/* Vacío */
+.cart-empty {
+  padding: 2rem;
+  background: transparent;
+  color: #666;
+  border-radius: 10px;
+}
+
+/* Responsive: apilar en móvil */
+@media (max-width: 576px) {
+  .cart-card .row > [class*="col-"] {
+    margin-bottom: 0.5rem;
+  }
+  .cart-footer {
+    align-items: stretch;
+  }
+  .cart-img {
+    max-width: 90px;
+    height: 80px;
+  }
+}
+  
+/* Pequeños ajustes para alinear tipografías con el resto del sitio */
+.cart-item-info h5,
+.cart-item-info p,
+.cart-variant {
+  font-family: 'Lato', sans-serif;
+}
+
+/* Asegurar contraste del badge cuando se usan temas oscuros de bootstrap */
+.badge.bg-primary.cart-badge,
+.cart-badge.badge-primary {
+  background: linear-gradient(135deg, #e91e63, #ff4081);
+  color: white;
+}
+
