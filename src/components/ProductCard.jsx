@@ -5,9 +5,7 @@ import { useNavigate } from "react-router-dom";
 function ProductCard({ product }) {
   const { id, name, price, description, image } = product;
   const navegador = useNavigate();
-  const redirigirProducto = () => {
-    navegador(`/detalle_producto/${id}`);
-  };
+  const redirigirProducto = () => {navegador(`/detalle_producto/${id}`);};
 
   return (
     <Card className="h-100 d-flex flex-column" style={{ width: "18rem" }}>
@@ -32,8 +30,5 @@ function ProductCard({ product }) {
     </Card>
   );
 }
-
-
-
 
 export default ProductCard;

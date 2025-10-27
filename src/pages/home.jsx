@@ -1,7 +1,7 @@
-import React from 'react';
-import { FiltrosContext } from '../Contexts/ContextoFiltros';
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import {Link, useNavigate} from 'react-router-dom';
+import { FiltrosContext } from '../Contexts/ContextoFiltros.jsx';
+
 
 
 function Home() {
@@ -15,12 +15,12 @@ function Home() {
 
 
     const botonTradicional = () =>{
-        setCategory("Pastelería Tradicional");
+        setCategory("Tortas Tradiciconales");
         navegador("/productos");
     }
 
     const botonEspeciales = () =>{
-        setCategory("Productos Especiales");
+        setCategory("Tortas Especiales");
         navegador("/productos");
     }
 
@@ -28,6 +28,11 @@ function Home() {
         setCategory("Tortas Circulares");
         navegador("/productos");
     }
+
+    const bontonCuadradas = () =>{
+        setCategory("Tortas Cuadradas");
+        navegador("/productos");
+    }   
 
 
 
@@ -56,11 +61,11 @@ function Home() {
                 <div className="col-md-3 col-sm-6 mb-4">
                     <div className="category-card text-center h-100">
                         <div className="category-icon">
-                            <img src="img/images2.jpeg" alt="Tortas" className="card-img-top product-img" />
+                            <img src="img/images16.jpeg" alt="Tortas" className="card-img-top product-img" />
                         </div>
-                        <h3>Tortas Circulares</h3>
+                        <h3>Tortas</h3>
                         <p>Cuadradas, circulares y especiales para toda ocasión</p>
-                        <button onClick={botoncirculares} className="btn btn-sm btn-outline-primary">Ver más</button>
+                        <Link to="/productos" className="btn btn-sm btn-outline-primary">Ver más</Link>
                     </div>
                 </div>
                 <div className="col-md-3 col-sm-6 mb-4">
@@ -70,15 +75,15 @@ function Home() {
                         </div>
                         <h3>Postres Individuales</h3>
                         <p>Deliciosos postres para disfrutar en porciones individuales</p>
-                        <button onClick={botonIndividuales} className="btn btn-sm btn-outline-primary">Ver más</button>
+                        <Link to="/productos" className="btn btn-sm btn-outline-primary">Ver más</Link>
                     </div>
                 </div>
                 <div className="col-md-3 col-sm-6 mb-4">
                     <div className="category-card text-center h-100">
                         <div className="category-icon">
-                            <img src="img/images12.jpeg" alt="Productos Especiales" className="card-img-top product-img"/>
+                            <img src="img/images14.jpeg" alt="Tortas Especiales" className="card-img-top product-img"/>
                         </div>
-                        <h3>Productos Especiales</h3>
+                        <h3>Tortas Especiales</h3>
                         <p>Opciones sin azúcar, sin gluten y veganas</p>
                         <button onClick={botonEspeciales} className="btn btn-sm btn-outline-primary">Ver más</button>
                     </div>
@@ -86,31 +91,21 @@ function Home() {
                 <div className="col-md-3 col-sm-6 mb-4">
                     <div className="category-card text-center h-100">
                         <div className="category-icon">
-                            <img src="img/images4.jpeg" alt="Pastelería Tradicional" className="card-img-top product-img"/>
+                            <img src="img/images5.jpeg" alt="Tortas Tradicionales" className="card-img-top product-img"/>
                         </div>
-                        <h3>Tradicional</h3>
+                        <h3>Tortas Tradicionales</h3>
                         <p>Recetas clásicas que han endulzado generaciones</p>
-                        <Link to="/productos.html?categoria=tradicional" className="btn btn-sm btn-outline-primary">Ver más</Link>
+                        <button onClick={botonTradicional} className="btn btn-sm btn-outline-primary">Ver más</button>
                     </div>
                 </div>
                 <div className="col-md-3 col-sm-6 mb-4">
                     <div className="category-card text-center h-100">
                         <div className="category-icon">
-                            <img src="img/images4.jpeg" alt="Pastelería Tradicional" className="card-img-top product-img"/>
+                            <img src="img/images10.jpeg" alt="Tortas Cuadradas" className="card-img-top product-img"/>
                         </div>
-                        <h3>Tradicional</h3>
-                        <p>Recetas clásicas que han endulzado generaciones</p>
-                        <Link to="/productos.html?categoria=tradicional" className="btn btn-sm btn-outline-primary">Ver más</Link>
-                    </div>
-                </div>
-                <div className="col-md-3 col-sm-6 mb-4">
-                    <div className="category-card text-center h-100">
-                        <div className="category-icon">
-                            <img src="img/images4.jpeg" alt="Pastelería Tradicional" className="card-img-top product-img"/>
-                        </div>
-                        <h3>Tradicional</h3>
-                        <p>Recetas clásicas que han endulzado generaciones</p>
-                        <Link to="/productos.html?categoria=tradicional" className="btn btn-sm btn-outline-primary">Ver más</Link>
+                        <h3>Tortas Cuadradas</h3>
+                        <p>Recetas cuadradas para toda la familia</p>
+                        <button onClick={bontonCuadradas} className="btn btn-sm btn-outline-primary">Ver más</button>
                     </div>
                 </div>
             </div>
@@ -191,4 +186,3 @@ function Home() {
 export default Home;
 
 
-    

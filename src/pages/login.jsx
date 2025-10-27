@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import "../App.css";
 import { useNavigate, Link } from 'react-router-dom'
 import { Form, Button, Card, Alert, Container, Row, Col } from 'react-bootstrap'
 import { useAuth } from '../contexts/AuthContext'
@@ -30,7 +31,7 @@ export default function Login() {
     return (
         <Container>
             <Row className="justify-content-center">
-                <Col md={25} lg={20}>
+                <Col md={15} lg={5}>
                     <Card className="p-3">
                         <Card.Body>
                             <Card.Title className="mb-3">Iniciar sesión</Card.Title>

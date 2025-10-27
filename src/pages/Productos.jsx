@@ -37,9 +37,8 @@ function Productos() {
             <option value='Tortas Circulares'>Tortas Circulares</option>
             <option value='Tortas Cuadradas'>Tortas Cuadradas</option>
             <option value='Postres Individuales'>Postres Individuales</option>
-            <option value='Sin Azúcar'>Sin Azúcar</option>
-            <option value='Tradicional'>Tradicional</option>
-            <option value='Sin Gluten'>Sin Gluten</option>
+            <option value='Tortas Tradicionales'>Tortas Tradicionales</option>
+            <option value='Tortas Especiales'>Tortas Especiales</option>
           </select>
         </label>
       </div>

@@ -586,15 +586,37 @@ h1, h2, h3, h4, h5, h6,
 
 /* Imagen del hero - MÁS PEQUEÑA */
 .hero-image {
-  max-width: 45%; /* ← Cambiar de 65% a 45% */
+  max-width: 60%; /* reduce aquí: 60%, 50%, 40% según prefieras */
   height: auto;
-  border-radius: 20px;
-  box-shadow: 0 15px 35px rgba(214, 51, 132, 0.3);
-  transition: transform 0.3s ease;
+  display: inline-block;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
 }
 
 .hero-image:hover {
-  transform: scale(1.08);
+  transform: translateY(-4px);
+}
+
+/* Forzar tamaño más pequeño para la imagen del hero */
+.hero-section .col-md-6.text-center .hero-image {
+  max-width: 50% !important; /* ajustar: 40% / 35% / 30% según lo quieras */
+  width: auto !important;
+  height: auto !important;
+  display: inline-block !important;
+  margin: 0 auto !important;
+}
+
+/* Ajustes responsivos: mantener legible en tablet/móvil */
+@media (max-width: 992px) {
+  .hero-section .col-md-6.text-center .hero-image {
+    max-width: 60% !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section .col-md-6.text-center .hero-image {
+    max-width: 100% !important;
+  }
 }
 
 /* Responsive para móvil */
@@ -615,8 +637,8 @@ h1, h2, h3, h4, h5, h6,
   }
   
   .hero-image {
-    max-width: 80%; /* ← Un poco más grande en móvil */
-    margin-top: 2rem;
+    max-width: 100%;
+    margin-top: 1rem;
   }
   
   .hero-btn {
@@ -643,5 +665,181 @@ h1, h2, h3, h4, h5, h6,
 /* Suavizar la transición entre hero y siguiente sección */
 .hero-section + section {
   border-top: 1px solid rgba(255, 182, 193, 0.3);
+}
+
+/* Estilos para que el botón seleccionado cambie de color (tamaños) */
+.size-options .btn {
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+/* cuando el botón tiene la clase "active" (se selecciona) */
+.size-options .btn.active,
+.size-options .btn[aria-pressed="true"] {
+  background-color: #0d6efd; /* color primario (Bootstrap primary) */
+  border-color: #0d6efd;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(13, 110, 253, 0.15);
+}
+
+/* variante más suave para outline cuando no está activo */
+.size-options .btn.btn-outline-primary {
+  color: #0d6efd;
+}
+
+/* feedback visual al presionar (momentáneo) para cualquier botón de cantidad */
+.quantity-btn:active {
+  background-color: rgba(13,110,253,0.12);
+  border-color: rgba(13,110,253,0.2);
+}
+
+/* deshabilitado */
+.quantity-btn:disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* Forzar color cuando una opción de tamaño está activa */
+.product-detail .size-options .btn.active,
+.product-detail .size-options .btn[aria-pressed="true"],
+.size-options .btn.active,
+.size-options .btn[aria-pressed="true"] {
+  background: linear-gradient(135deg, #e91e63, #ff4081) !important; /* color rosa */
+  border-color: transparent !important;
+  color: #fff !important;
+  box-shadow: 0 6px 18px rgba(233,30,99,0.2) !important;
+}
+
+/* Asegurar que el estilo outline no sobreescriba cuando está seleccionado */
+.product-detail .size-options .btn.btn-outline-primary.active,
+.size-options .btn.btn-outline-primary.active {
+  background: linear-gradient(135deg, #e91e63, #ff4081) !important;
+  border-color: transparent !important;
+  color: #fff !important;
+}
+
+/* Pequeño ajuste para el estado focus/hover */
+.product-detail .size-options .btn:focus,
+.size-options .btn:focus {
+  box-shadow: 0 6px 18px rgba(233,30,99,0.12) !important;
+}
+
+/* Estilos específicos para la página de carrito (añadir al final de App.css) */
+.cart-page {
+  background: linear-gradient(180deg, #fff0f6 0%, #ffe6f0 50%, #ffd6e8 100%) !important;
+  padding: 2rem 1rem;
+  border-radius: 12px;
+  margin-top: 1rem;
+}
+
+.cart-card {
+  border-radius: 12px;
+  padding: 0.9rem;
+  margin-bottom: 1rem;
+  background: #fff;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  overflow: hidden;
+}
+
+.cart-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+.cart-img {
+  width: 100%;
+  max-width: 110px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+}
+
+.cart-item-info h5 {
+  margin-bottom: 0.25rem;
+  font-size: 1.05rem;
+  color: #333;
+}
+
+.cart-item-info p {
+  margin: 0;
+  color: #666;
+}
+
+.cart-variant {
+  display: block;
+  font-size: 0.9rem;
+  color: #6c757d;
+  margin-top: 0.25rem;
+}
+
+/* badge de cantidad */
+.cart-badge {
+  font-size: 0.95rem;
+  padding: 0.35rem 0.6rem;
+  border-radius: 12px;
+}
+
+/* botón eliminar pequeño */
+.btn-sm.btn-danger {
+  padding: 0.28rem 0.5rem;
+  font-size: 0.9rem;
+  border-radius: 8px;
+}
+
+/* footer del carrito */
+.cart-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.6rem;
+  margin-top: 0.5rem;
+}
+
+/* Hacer que el botón de "Realizar compra" use el mismo estilo visual que .btn-primary */
+.checkout-btn {
+  border-radius: 25px;
+  padding: 0.6rem 1.6rem;
+  font-weight: 600;
+  box-shadow: 0 6px 18px rgba(233,30,99,0.16);
+  background: linear-gradient(135deg, #e91e63, #ff4081) !important;
+  border: none !important;
+  color: #fff !important;
+}
+
+/* Vacío */
+.cart-empty {
+  padding: 2rem;
+  background: transparent;
+  color: #666;
+  border-radius: 10px;
+}
+
+/* Responsive: apilar en móvil */
+@media (max-width: 576px) {
+  .cart-card .row > [class*="col-"] {
+    margin-bottom: 0.5rem;
+  }
+  .cart-footer {
+    align-items: stretch;
+  }
+  .cart-img {
+    max-width: 90px;
+    height: 80px;
+  }
+}
+  
+/* Pequeños ajustes para alinear tipografías con el resto del sitio */
+.cart-item-info h5,
+.cart-item-info p,
+.cart-variant {
+  font-family: 'Lato', sans-serif;
+}
+
+/* Asegurar contraste del badge cuando se usan temas oscuros de bootstrap */
+.badge.bg-primary.cart-badge,
+.cart-badge.badge-primary {
+  background: linear-gradient(135deg, #e91e63, #ff4081);
+  color: white;
 }
 

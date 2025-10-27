@@ -4,7 +4,7 @@ export const productos = [
     name: "Torta de Chocolate",
     price: 15000,
     description: "Deliciosa torta de chocolate con relleno de crema y cubierta de ganache.",
-    category: "Tradicional",
+    category: "Tortas Tradicionales",
     categoryLabel: "Tradicional",
     image: "img/images2.jpeg"
   },
@@ -22,16 +22,16 @@ export const productos = [
     name: "Torta Red Velvet",
     price: 20000,
     description: "Clásica torta Red Velvet con capas de bizcocho rojo y crema de queso.",
-    category: "Tradicional",
+    category: "Tortas Tradicionales",
     categoryLabel: "Tradicional",
-    image: "img/images5.jpeg"
+    image: "img/images3.jpeg"
   },
   {
     id: 4,
     name: "Torta Sin Azúcar",
     price: 16500,
     description: "Exquisita torta endulzada naturalmente, ideal para personas con restricciones de azúcar.",
-    category: "Sin Azúcar",
+    category: "Tortas Especiales",
     categoryLabel: "Sin Azúcar",
     image: "img/images8.jpeg"
   },
@@ -40,7 +40,7 @@ export const productos = [
     name: "Torta Sin Gluten",
     price: 19000,
     description: "Deliciosa opción para celíacos, elaborada con harinas alternativas y mismo sabor exquisito.",
-    category: "Sin Gluten",
+    category: "Tortas Especiales",
     categoryLabel: "Sin Gluten",
     image: "img/images4.jpeg"
   },
@@ -49,7 +49,7 @@ export const productos = [
     name: "Torta Vegana",
     price: 17500,
     description: "Elaborada sin productos de origen animal, pero con todo el sabor de una torta tradicional.",
-    category: "Tortas Circulares",
+    category: "Tortas Especiales",
     categoryLabel: "Sin Gluten",
     image: "img/images7.jpeg"
   },
