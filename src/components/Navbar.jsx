@@ -12,10 +12,9 @@ function NavbarComponent() {
             <Nav.Link as={Link} to="/">Home</Nav.Link>
             <Nav.Link as={Link} to="/productos">Productos</Nav.Link>
             <Nav.Link as={Link} to="/contacto">Contacto</Nav.Link>
-            <Nav.Link as={Link} to="/blog">Blog</Nav.Link>
             <Nav.Link as={Link} to="/carrito">Carrito</Nav.Link>
 
-            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+            <NavDropdown title="Perfil" id="basic-nav-dropdown">
               <NavDropdown.Item as={Link} to="/registro">📝 Registro</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/login">🔐 Iniciar Sesión</NavDropdown.Item>
               <NavDropdown.Divider />
