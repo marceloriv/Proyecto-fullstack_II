@@ -15,7 +15,7 @@ function Home() {
 
 
     const botonTradicional = () =>{
-        setCategory("Tortas Tradiciconales");
+        setCategory("Tortas Tradicionales");
         navegador("/productos");
     }
 
@@ -61,11 +61,11 @@ function Home() {
                 <div className="col-md-3 col-sm-6 mb-4">
                     <div className="category-card text-center h-100">
                         <div className="category-icon">
-                            <img src="img/images16.jpeg" alt="Tortas" className="card-img-top product-img" />
+                            <img src="img/images16.jpeg" alt="Tortas Circulares" className="card-img-top product-img" />
                         </div>
-                        <h3>Tortas</h3>
+                        <h3>Tortas circulares</h3>
                         <p>Cuadradas, circulares y especiales para toda ocasión</p>
-                        <Link to="/productos" className="btn btn-sm btn-outline-primary">Ver más</Link>
+                        <button onClick={botoncirculares} className="btn btn-sm btn-outline-primary">Ver más</button>
                     </div>
                 </div>
                 <div className="col-md-3 col-sm-6 mb-4">
@@ -75,7 +75,7 @@ function Home() {
                         </div>
                         <h3>Postres Individuales</h3>
                         <p>Deliciosos postres para disfrutar en porciones individuales</p>
-                        <Link to="/productos" className="btn btn-sm btn-outline-primary">Ver más</Link>
+                        <button onClick={botonIndividuales} className="btn btn-sm btn-outline-primary">Ver más</button>
                     </div>
                 </div>
                 <div className="col-md-3 col-sm-6 mb-4">

@@ -5,7 +5,7 @@ export const productos = [
     price: 15000,
     description: "Deliciosa torta de chocolate con relleno de crema y cubierta de ganache.",
     category: "Tortas Tradicionales",
-    categoryLabel: "Tradicional",
+    categoryLabel: "Tortas Tradicionales",
     image: "img/images2.jpeg"
   },
   {
@@ -23,8 +23,8 @@ export const productos = [
     price: 20000,
     description: "Clásica torta Red Velvet con capas de bizcocho rojo y crema de queso.",
     category: "Tortas Tradicionales",
-    categoryLabel: "Tradicional",
-    image: "img/images3.jpeg"
+    categoryLabel: "Tortas Tradicionales",
+    image: "img/images5.jpeg"
   },
   {
     id: 4,
@@ -76,8 +76,8 @@ export const productos = [
     name: "Torta Personalizada",
     price: 25000,
     description: "Creamos la torta de tus sueños para tu ocasión especial. Consultar por diseños.",
-    category: "Tortas Circulares",
-    categoryLabel: "Tortas Circulares",
+    category: "Tortas Especiales",
+    categoryLabel: "Tortas Especiales",
     image: "img/images14.jpeg"
   },
   {
