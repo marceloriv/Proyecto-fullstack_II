@@ -1,77 +1,94 @@
-import React, { createContext, useContext, useEffect, useState } from 'react'
+import React, { createContext, useState, useContext, useEffect } from "react";
+import api from "../Api.js";
 
-const AuthContext = createContext(null)
-export const useAuth = () => useContext(AuthContext)
-
-const USERS_KEY = 'tg_users'
-const SESSION_KEY = 'tg_session'
+export const AuthContext = createContext(null);
 
 export function AuthProvider({ children }) {
-    const [user, setUser] = useState(null)
+  const [usuario, setUsuario] = useState(null);
 
-    useEffect(() => {
-        try {
-            const s = JSON.parse(localStorage.getItem(SESSION_KEY) || 'null')
-            if (s && s.id && s.username) setUser(s)
-            else localStorage.removeItem(SESSION_KEY)
-        } catch { localStorage.removeItem(SESSION_KEY) }
-    }, [])
+  console.log("BASE URL API USUARIOS:", api.defaults.baseURL);
 
-    const getUsers = () => {
-        try { return JSON.parse(localStorage.getItem(USERS_KEY)) || [] }
-        catch { return [] }
-    }
-    const saveUsers = (list) => localStorage.setItem(USERS_KEY, JSON.stringify(list))
+  // login usa "username" del formulario y busca por correo o nombre
+  const login = async ({ username, password }) => {
+    const identifier = (username || "").trim();
+    const passwordInput = (password || "").trim();
 
-    const vName = v => (typeof v === 'string' && v.trim().length >= 3) || 'El nombre debe tener al menos 3 caracteres'
-    const vUser = v => {
-        const s = String(v || '').trim()
-        if (!s) return 'El nombre de usuario no puede estar vacío'
-        if (s.length < 3) return 'El nombre de usuario debe tener al menos 3 caracteres'
-        if (/\s/.test(s)) return 'El nombre de usuario no puede contener espacios'
-        return true
-    }
-    const vPass = v => (typeof v === 'string' && v.length >= 6) || 'La contraseña debe tener al menos 6 caracteres'
+    // Traemos todos los usuarios del backend
+    const resp = await api.get("/usuarios");
+    const lista = resp.data._embedded?.usuarioModelList || [];
 
-    const register = ({ nombre, username, password }) => {
-        const n = String(nombre || '').trim()
-        const u = String(username || '').trim()
-        const p = String(password || '')
+    // Buscamos por correo O nombre + password
+    const encontrado = lista.find(
+      (u) =>
+        (u.correo === identifier || u.nombre === identifier) &&
+        u.password === passwordInput
+    );
 
-        const vn = vName(n); if (vn !== true) throw new Error(vn)
-        const vu = vUser(u); if (vu !== true) throw new Error(vu)
-        const vp = vPass(p); if (vp !== true) throw new Error(vp)
-
-        const users = getUsers()
-        if (users.some(x => x.username.toLowerCase() === u.toLowerCase()))
-            throw new Error('El nombre de usuario ya está en uso.')
-
-        const id = (typeof crypto !== 'undefined' && crypto.randomUUID) ? crypto.randomUUID() : `${Date.now()}-${Math.random().toString(36).slice(2,9)}`
-        const newUser = { id, nombre: n, username: u, password: p }
-        users.push(newUser)
-        saveUsers(users)
-        return { id, nombre: n, username: u }
+    if (!encontrado) {
+      throw new Error("Usuario o contraseña incorrectos");
     }
 
-    const login = ({ username, password }) => {
-        const u = String(username || '').trim()
-        const p = String(password || '')
-        if (!u || !p) throw new Error('Usuario y contraseña son requeridos.')
+    // aca definimos quién es admin
+    const isAdmin =
+      encontrado.correo === "ad.admin@admin.com" || // correo admin
+      encontrado.nombre === "admin";                // o nombre "admin"
 
-        const users = getUsers()
-        const match = users.find(x => x.username.toLowerCase() === u.toLowerCase() && x.password === p)
-        if (!match) throw new Error('Usuario o contraseña inválidos.')
+    const usuarioFinal = { ...encontrado, isAdmin };
 
-        const sessionUser = { id: match.id, nombre: match.nombre, username: match.username }
-        setUser(sessionUser)
-        try { localStorage.setItem(SESSION_KEY, JSON.stringify(sessionUser)) } catch {}
-        return sessionUser
+    // guardamos usuarioFinal (con isAdmin) en el contexto y en localStorage
+    setUsuario(usuarioFinal);
+    localStorage.setItem("usuario", JSON.stringify(usuarioFinal));
+
+    return usuarioFinal;
+  };
+
+  // register crea un nuevo usuario en /api/usuarios
+  const register = async (payload) => {
+    const body = {
+      nombre: (payload.nombre || "").trim(),
+      correo: (payload.email || "").trim(), // el backend usa "correo"
+      password: (payload.password || "").trim(),
+      telefono: payload.telefono
+        ? Number(String(payload.telefono).trim())
+        : null,
+      direccion: (payload.direccion || "").trim() || null,
+    };
+
+    console.log("BODY REGISTER QUE SE ENVÍA:", body);
+
+    const resp = await api.post("/usuarios", body);
+    // los nuevos usuarios no son admin
+    return { ...resp.data, isAdmin: false };
+  };
+
+  const logout = () => {
+    setUsuario(null);
+    localStorage.removeItem("usuario");
+  };
+
+  // Cargar sesión guardada (si existe)
+  useEffect(() => {
+    const savedUser = localStorage.getItem("usuario");
+    if (savedUser) {
+      const parsed = JSON.parse(savedUser);
+
+      // por si en localStorage quedó sin isAdmin, lo recalculamos
+      const isAdmin =
+        parsed.correo === "ad.admin@admin.com" || parsed.nombre === "admin";
+
+      setUsuario({ ...parsed, isAdmin });
     }
+  }, []);
 
-    const logout = () => {
-        setUser(null)
-        localStorage.removeItem(SESSION_KEY)
-    }
+  const value = { usuario, login, register, logout };
 
-    return <AuthContext.Provider value={{ user, register, login, logout }}>{children}</AuthContext.Provider>
+  return (
+    <AuthContext.Provider value={value}>
+      {children}
+    </AuthContext.Provider>
+  );
+}
+
+export function useAuth() {
+  return useContext(AuthContext);
 }
