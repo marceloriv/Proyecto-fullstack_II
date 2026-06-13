@@ -47,7 +47,7 @@ function Home() {
                     <Link to="/productos" className="btn btn-primary hero-btn">Ver Productos</Link>
                 </div>
                 <div className="col-md-6 text-center">
-                    <img src="img/images14.jpeg" alt="Torta de celebración" className="img-fluid hero-image" />
+                    <img src="/img/images14.jpeg" alt="Torta de celebración" className="img-fluid hero-image" />
                 </div>
             </div>
         </div>
@@ -61,7 +61,7 @@ function Home() {
                 <div className="col-md-3 col-sm-6 mb-4">
                     <div className="category-card text-center h-100">
                         <div className="category-icon">
-                            <img src="img/images16.jpeg" alt="Tortas" className="card-img-top product-img" />
+                            <img src="/img/images16.jpeg" alt="Tortas" className="card-img-top product-img" />
                         </div>
                         <h3>Tortas</h3>
                         <p>Cuadradas, circulares y especiales para toda ocasión</p>
@@ -71,7 +71,7 @@ function Home() {
                 <div className="col-md-3 col-sm-6 mb-4">
                     <div className="category-card text-center h-100">
                         <div className="category-icon">
-                            <img src="img/images11.jpeg" alt="Postres Individuales" className="card-img-top product-img" />
+                            <img src="/img/images11.jpeg" alt="Postres Individuales" className="card-img-top product-img" />
                         </div>
                         <h3>Postres Individuales</h3>
                         <p>Deliciosos postres para disfrutar en porciones individuales</p>
@@ -81,7 +81,7 @@ function Home() {
                 <div className="col-md-3 col-sm-6 mb-4">
                     <div className="category-card text-center h-100">
                         <div className="category-icon">
-                            <img src="img/images14.jpeg" alt="Tortas Especiales" className="card-img-top product-img"/>
+                            <img src="/img/images14.jpeg" alt="Tortas Especiales" className="card-img-top product-img"/>
                         </div>
                         <h3>Tortas Especiales</h3>
                         <p>Opciones sin azúcar, sin gluten y veganas</p>
@@ -91,7 +91,7 @@ function Home() {
                 <div className="col-md-3 col-sm-6 mb-4">
                     <div className="category-card text-center h-100">
                         <div className="category-icon">
-                            <img src="img/images5.jpeg" alt="Tortas Tradicionales" className="card-img-top product-img"/>
+                            <img src="/img/images5.jpeg" alt="Tortas Tradicionales" className="card-img-top product-img"/>
                         </div>
                         <h3>Tortas Tradicionales</h3>
                         <p>Recetas clásicas que han endulzado generaciones</p>
@@ -101,7 +101,7 @@ function Home() {
                 <div className="col-md-3 col-sm-6 mb-4">
                     <div className="category-card text-center h-100">
                         <div className="category-icon">
-                            <img src="img/images10.jpeg" alt="Tortas Cuadradas" className="card-img-top product-img"/>
+                            <img src="/img/images10.jpeg" alt="Tortas Cuadradas" className="card-img-top product-img"/>
                         </div>
                         <h3>Tortas Cuadradas</h3>
                         <p>Recetas cuadradas para toda la familia</p>
@@ -130,7 +130,7 @@ function Home() {
         <div className="container">
             <div className="row align-items-center">
                 <div className="col-md-6">
-                    <img src="img/imagesHistoria.jpeg" alt="Nuestra historia" className="img-fluid rounded shadow"/>
+                    <img src="/img/imagesHistoria.jpeg" alt="Nuestra historia" className="img-fluid rounded shadow"/>
                 </div>
                 <div className="col-md-6">
                     <h2 className="section-title">50 años de tradición dulce</h2>
