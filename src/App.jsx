@@ -10,6 +10,7 @@ import { ContextoFiltros } from "./Contexts/ContextoFiltros.jsx";
 import { AuthProvider } from '../src/contexts/AuthContext';
 import DetalleDeProducto from "./pages/detalleDeProducto.jsx";
 import Carrito from "./pages/Carrito.jsx";
+import Blog from "./pages/Blog.jsx";
 
 function App(){
   return(
@@ -22,6 +23,7 @@ function App(){
             <Route path="/productos" element={<Productos />} />
             <Route path="/nosotros" element={<Nosotros />} />
             <Route path="/contacto" element={<Contacto />} />
+            <Route path="/blog" element={<Blog />} />
             <Route path="/login" element={<Login />} />
             <Route path="/registro" element={<Registro />} />
             <Route path="/carrito" element={<Carrito />} /> 
