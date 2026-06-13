@@ -8,16 +8,12 @@ function NavbarComponent() {
         <Navbar.Brand as={Link} to="/">Pastelería Mil Sabores</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto"> 
+          <Nav className="ms-auto">
             <Nav.Link as={Link} to="/">Home</Nav.Link>
             <Nav.Link as={Link} to="/productos">Productos</Nav.Link>
-<<<<<<< HEAD
             <Nav.Link as={Link} to="/nosotros">Nosotros</Nav.Link>
             <Nav.Link as={Link} to="/contacto">Contacto</Nav.Link>
-=======
-            <Nav.Link as={Link} to="/contacto">Contacto</Nav.Link>
             <Nav.Link as={Link} to="/blog">Blog</Nav.Link>
->>>>>>> origin/main
             <Nav.Link as={Link} to="/carrito">Carrito</Nav.Link>
 
             <NavDropdown title="Dropdown" id="basic-nav-dropdown">
