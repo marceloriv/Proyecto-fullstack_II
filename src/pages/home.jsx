@@ -158,7 +158,7 @@ function Home() {
                 <div className="col-md-4 mb-4">
                     <h4>Enlaces Rápidos</h4>
                     <ul className="footer-links">
-                        <li><Link to="/Home">Inicio</Link></li>
+                        <li><Link to="/">Inicio</Link></li>
                         <li><Link to="/productos">Productos</Link></li>
                         <li><Link to="/nosotros">Nosotros</Link></li>
                         <li><Link to="/contacto">Contacto</Link></li>
