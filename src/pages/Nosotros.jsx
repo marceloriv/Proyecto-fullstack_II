@@ -27,7 +27,7 @@ const About = () => {
                             <p>Hoy, después de 50 años, mantenemos vivo el legado de nuestras recetas originales mientras incorporamos nuevas técnicas y sabores, siempre con el mismo amor y dedicación que nos caracteriza.</p>
                         </div>
                         <div className="col-md-6">
-                            <img src="img/imagesHistoria.jpeg" alt="Historia de Pastelería Mil Sabores" className="img-fluid rounded shadow" />
+                            <img src="/img/imagesHistoria.jpeg" alt="Historia de Pastelería Mil Sabores" className="img-fluid rounded shadow" />
                         </div>
                     </div>
 

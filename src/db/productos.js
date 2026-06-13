@@ -6,7 +6,7 @@ export const productos = [
     description: "Deliciosa torta de chocolate con relleno de crema y cubierta de ganache.",
     category: "Tortas Tradicionales",
     categoryLabel: "Tradicional",
-    image: "img/images2.jpeg"
+    image: "/img/images2.jpeg"
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ export const productos = [
     description: "Torta esponjosa con crema y decorada con variedad de frutas frescas de la estación.",
     category: "Tortas Circulares",
     categoryLabel: "Tortas Circulares",
-    image: "img/images12.jpeg"
+    image: "/img/images12.jpeg"
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ export const productos = [
     description: "Clásica torta Red Velvet con capas de bizcocho rojo y crema de queso.",
     category: "Tortas Tradicionales",
     categoryLabel: "Tradicional",
-    image: "img/images3.jpeg"
+    image: "/img/images3.jpeg"
   },
   {
     id: 4,
@@ -33,7 +33,7 @@ export const productos = [
     description: "Exquisita torta endulzada naturalmente, ideal para personas con restricciones de azúcar.",
     category: "Tortas Especiales",
     categoryLabel: "Sin Azúcar",
-    image: "img/images8.jpeg"
+    image: "/img/images8.jpeg"
   },
   {
     id: 5,
@@ -42,7 +42,7 @@ export const productos = [
     description: "Deliciosa opción para celíacos, elaborada con harinas alternativas y mismo sabor exquisito.",
     category: "Tortas Especiales",
     categoryLabel: "Sin Gluten",
-    image: "img/images4.jpeg"
+    image: "/img/images4.jpeg"
   },
   {
     id: 6,
@@ -51,7 +51,7 @@ export const productos = [
     description: "Elaborada sin productos de origen animal, pero con todo el sabor de una torta tradicional.",
     category: "Tortas Especiales",
     categoryLabel: "Sin Gluten",
-    image: "img/images7.jpeg"
+    image: "/img/images7.jpeg"
   },
   {
     id: 7,
@@ -60,7 +60,7 @@ export const productos = [
     description: "Porción individual de cheesecake con base de galleta y topping de frutos rojos.",
     category: "Postres Individuales",
     categoryLabel: "Postres Individuales",
-    image: "img/images13.jpeg"
+    image: "/img/images13.jpeg"
   },
   {
     id: 8,
@@ -69,7 +69,7 @@ export const productos = [
     description: "Brownie intenso de chocolate con nueces, disponible en porción individual o familiar.",
     category: "Postres Individuales",
     categoryLabel: "Postres Individuales",
-    image: "img/images15.jpeg"
+    image: "/img/images15.jpeg"
   },
   {
     id: 9,
@@ -78,7 +78,7 @@ export const productos = [
     description: "Creamos la torta de tus sueños para tu ocasión especial. Consultar por diseños.",
     category: "Tortas Circulares",
     categoryLabel: "Tortas Circulares",
-    image: "img/images14.jpeg"
+    image: "/img/images14.jpeg"
   },
   {
     id: 10,
@@ -87,7 +87,7 @@ export const productos = [
     description: "Clásica torta bañada en mezcla de tres leches y decorada con merengue o crema chantillí.",
     category: "Tortas Cuadradas",
     categoryLabel: "Tortas Cuadradas",
-    image: "img/images10.jpeg"
+    image: "/img/images10.jpeg"
   },
   {
     id: 11,
@@ -96,7 +96,7 @@ export const productos = [
     description: "Húmeda torta de zanahoria con especias, nueces y cubierta de frosting de queso crema.",
     category: "Tortas Circulares",
     categoryLabel: "Tortas Circulares",
-    image: "img/images16.jpeg"
+    image: "/img/images16.jpeg"
   },
   {
     id: 12,
@@ -105,6 +105,6 @@ export const productos = [
     description: "Clásico postre italiano en porción individual, con café, cacao y queso mascarpone.",
     category: "Postres Individuales",
     categoryLabel: "Postres Individuales",
-    image: "img/images18.jpeg"
+    image: "/img/images18.jpeg"
   }
 ];
